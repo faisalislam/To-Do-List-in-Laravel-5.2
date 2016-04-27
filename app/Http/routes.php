@@ -24,3 +24,7 @@ Route::bind('tasks', function($value, $route){
 Route::bind('projects', function($value, $route){
 	return App\Project::whereSlug($value)->first();
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
