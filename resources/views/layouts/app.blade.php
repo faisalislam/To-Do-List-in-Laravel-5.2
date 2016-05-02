@@ -71,8 +71,16 @@
             </div>
         </div>
     </nav>
-
+    <div class="content">
+    @if (Session::has('message'))
+        <div class="flash alert-info">
+            <p>{{ Session::get('message') }}</p>
+        </div>
+    @endif
+ 
     @yield('content')
+</div>
+ 
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
