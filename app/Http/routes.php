@@ -11,6 +11,9 @@
 |
 */
 
+Route::model('tasks', 'Task');
+Route::model('projects', 'Project');
+
 Route::get('/', function () {
     return view('welcome');
 });
